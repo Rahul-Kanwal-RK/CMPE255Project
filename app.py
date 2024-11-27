@@ -141,7 +141,7 @@ from folium.plugins import MarkerCluster
 from streamlit_folium import st_folium
 
 # Hardcoded file path for the dataset
-arrest_data_path = 'updated_arrestData_withoutSampling.csv'
+arrest_data_path = 'updated_sampled_arrestData.csv'
 arrest_data = pd.read_csv(arrest_data_path)
 
 
@@ -166,6 +166,3 @@ if 'Latitude' in arrest_data.columns and 'Longitude' in arrest_data.columns:
     st_folium(mymap, width=800, height=600)
 else:
     st.error("The dataset does not contain 'Latitude' and 'Longitude' columns.")
-
-
-
